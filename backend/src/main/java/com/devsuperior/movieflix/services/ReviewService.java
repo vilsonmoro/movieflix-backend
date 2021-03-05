@@ -1,4 +1,4 @@
-package com.devsuperior.movieflix.entities.services;
+package com.devsuperior.movieflix.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,6 +26,7 @@ public class ReviewService {
 	@Autowired
 	private AuthService authService;
 
+	
 	@Transactional
 	public ReviewDTO insert(ReviewDTO dto) {
 		Review entity = new Review();

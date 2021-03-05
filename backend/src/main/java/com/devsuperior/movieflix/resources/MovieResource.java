@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.devsuperior.movieflix.dto.MovieDTO;
-import com.devsuperior.movieflix.entities.services.MovieService;
+import com.devsuperior.movieflix.services.MovieService;
 
 @RestController
 @RequestMapping(value = "/movies")
@@ -21,14 +21,14 @@ public class MovieResource {
 	MovieService service;
 
 	@GetMapping
-	public ResponseEntity<Page<MovieDTO>> findAll(@RequestParam(value = "genre", defaultValue = "0") Long genre,
+	public ResponseEntity<Page<MovieDTO>> findAll(@RequestParam(value = "genreId", defaultValue = "0") Long genreId,
 			@RequestParam(value = "page", defaultValue = "0") Integer page,
 			@RequestParam(value = "size", defaultValue = "12") Integer size,
 			@RequestParam(value = "direction", defaultValue = "ASC") String direction,
 			@RequestParam(value = "orderBy", defaultValue = "title") String orderBy) {
 
 		PageRequest pageRequest = PageRequest.of(page, size, Direction.valueOf(direction), orderBy);
-		Page<MovieDTO> list = service.findAllPaged(genre, pageRequest);
+		Page<MovieDTO> list = service.findAllPaged(genreId, pageRequest);
 		return ResponseEntity.ok().body(list);
 	}
 

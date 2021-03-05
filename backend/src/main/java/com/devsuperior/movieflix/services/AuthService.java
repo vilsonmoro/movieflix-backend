@@ -1,4 +1,4 @@
-package com.devsuperior.movieflix.entities.services;
+package com.devsuperior.movieflix.services;
 
 
 
@@ -8,9 +8,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.devsuperior.movieflix.entities.User;
-import com.devsuperior.movieflix.entities.services.exceptions.ForbiddenException;
-import com.devsuperior.movieflix.entities.services.exceptions.UnauthorizedException;
 import com.devsuperior.movieflix.repositories.UserRepository;
+import com.devsuperior.movieflix.services.exceptions.ForbiddenException;
+import com.devsuperior.movieflix.services.exceptions.UnauthorizedException;
 
 @Service
 public class AuthService {
@@ -26,10 +26,16 @@ public class AuthService {
 		}
 	}
     
-    public void validSelfOrAdmin(Long userId) {
+   /* public void validSelfOrAdmin(Long userId) {
     	User user = authenticated();
     	if(!user.getId().equals(userId) && !user.hasHole("ROLE_ADMIN")) {
     	   throw new ForbiddenException("Acces denied"); 	
     	}
-    }
+    }*/
+    public void validSelfOrMember(Long userId) {
+    	User user = authenticated();
+    	if(!user.getId().equals(userId) && !user.hasHole("ROLE_MEMBER")) {
+    	   throw new ForbiddenException("Acces denied"); 	
+    	}
+}
 }

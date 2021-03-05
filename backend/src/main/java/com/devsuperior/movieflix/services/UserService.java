@@ -1,4 +1,4 @@
-package com.devsuperior.movieflix.entities.services;
+package com.devsuperior.movieflix.services;
 
 import java.util.Optional;
 
@@ -13,8 +13,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.devsuperior.movieflix.dto.UserDTO;
 import com.devsuperior.movieflix.entities.User;
-import com.devsuperior.movieflix.entities.services.exceptions.ResourceNotFoundException;
 import com.devsuperior.movieflix.repositories.UserRepository;
+import com.devsuperior.movieflix.services.exceptions.ResourceNotFoundException;
 
 @Service
 public class UserService implements UserDetailsService {
@@ -24,11 +24,12 @@ public class UserService implements UserDetailsService {
 	private UserRepository userRepository;
 	
 	@Autowired
-	private AuthService AuthService;
+	private AuthService authService;
 	
 	@Transactional(readOnly = true)
 	public UserDTO findById(Long id) {
-		AuthService.validSelfOrAdmin(id);		
+		//AuthService.validSelfOrAdmin(id);		
+		authService.validSelfOrMember(id);
 		Optional<User> obj = userRepository.findById(id);
 		User entity = obj.orElseThrow(() -> new ResourceNotFoundException("Entity not found"));
 

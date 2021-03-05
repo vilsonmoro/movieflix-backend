@@ -1,4 +1,4 @@
-package com.devsuperior.movieflix.entities.services;
+package com.devsuperior.movieflix.services;
 
 import java.util.ArrayList;
 import java.util.List;
