@@ -21,8 +21,7 @@ public class MovieResource {
 	MovieService service;
 
 	@GetMapping
-	public ResponseEntity<Page<MovieDTO>> findAll(
-			@RequestParam(value = "genre", defaultValue = "0") Long genre,
+	public ResponseEntity<Page<MovieDTO>> findAll(@RequestParam(value = "genre", defaultValue = "0") Long genre,
 			@RequestParam(value = "page", defaultValue = "0") Integer page,
 			@RequestParam(value = "size", defaultValue = "12") Integer size,
 			@RequestParam(value = "direction", defaultValue = "ASC") String direction,
