@@ -21,13 +21,15 @@ public class MovieResource {
 	MovieService service;
 
 	@GetMapping
-	public ResponseEntity<Page<MovieDTO>> findAll(@RequestParam(value = "page", defaultValue = "0") Integer page,
+	public ResponseEntity<Page<MovieDTO>> findAll(
+			@RequestParam(value = "genre", defaultValue = "0") Long genre,
+			@RequestParam(value = "page", defaultValue = "0") Integer page,
 			@RequestParam(value = "size", defaultValue = "12") Integer size,
 			@RequestParam(value = "direction", defaultValue = "ASC") String direction,
 			@RequestParam(value = "orderBy", defaultValue = "title") String orderBy) {
 
 		PageRequest pageRequest = PageRequest.of(page, size, Direction.valueOf(direction), orderBy);
-		Page<MovieDTO> list = service.findAllPaged(pageRequest);
+		Page<MovieDTO> list = service.findAllPaged(genre, pageRequest);
 		return ResponseEntity.ok().body(list);
 	}
 
