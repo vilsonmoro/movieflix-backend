@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.devsuperior.movieflix.dto.ReviewDTO;
+import com.devsuperior.movieflix.dto.UserDTO;
+import com.devsuperior.movieflix.services.AuthService;
 import com.devsuperior.movieflix.services.ReviewService;
 
 @RestController
@@ -21,6 +23,8 @@ import com.devsuperior.movieflix.services.ReviewService;
 public class ReviewResource {
 	@Autowired
 	ReviewService service;
+	
+	
 	
 	@PreAuthorize("hasAnyRole('MEMBER')")
 	@PostMapping
