@@ -19,12 +19,10 @@ import com.devsuperior.movieflix.services.AuthService;
 import com.devsuperior.movieflix.services.ReviewService;
 
 @RestController
-@RequestMapping(value = "/review")
+@RequestMapping(value = "/reviews")
 public class ReviewResource {
 	@Autowired
-	ReviewService service;
-	
-	
+	ReviewService service;	
 	
 	@PreAuthorize("hasAnyRole('MEMBER')")
 	@PostMapping
