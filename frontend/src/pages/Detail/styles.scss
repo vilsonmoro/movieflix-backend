@@ -1,0 +1,130 @@
+.detail-container{
+    padding: 35px 135px 46px 135px;
+}
+
+.detail-content{
+   padding: 24px 28px 30px 17px;
+   display: flex;
+   background: #6C6C6C;
+   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+   border-radius: 10px;
+   .detail-img-movie{
+        width: 526px;
+        height: 320px; 
+    }  
+}
+
+.detail-img-container{
+    width: 50%;    
+}
+  
+.detail-movie{
+   margin-left: 58px; 
+}
+
+.detail-title{
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 49px;
+    letter-spacing: -0.015em;
+    color: #FFFFFF;
+}
+
+.detail-year{
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: -0.015em;
+    color: #FFC700;
+}
+
+.detail-subtitle{
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;    
+    color: #FFFFFF; 
+    margin-bottom: 9px;
+}
+
+.detail-descripton{
+    font-size: 16px;
+    line-height: 22px;
+    text-align: justify;
+    letter-spacing: -0.015em;
+    color: #9E9E9E;
+
+    border: 1px solid #E1E1E1;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 19px 13px 18px;
+}
+.detail-form-save-avaliation{
+    background: #6C6C6C;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 17px 16px 22px; 
+    margin-top: 15px;
+    margin-bottom: 15px; 
+}
+
+.detail-form-input{
+    background: #FFFFFF;
+    border: 1px solid #E1E1E1;
+    box-sizing: border-box;
+    border-radius: 10px;
+   
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.015em;
+
+    color: #9E9E9E;
+    
+    padding: 16px 10px 24px 40px;
+    width: 100%;  
+}
+
+.detail-form-button{
+    display: flex;
+    background: #FFC700;
+    border-radius: 10px;
+    margin: 12px auto 12px auto;
+    padding: 14px 100px 14px 100px;
+    
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: -0.015em;
+    
+    color: #000000;
+}
+
+.detail-avaliation{
+    background: #6C6C6C;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin-top: 15px;
+    padding: 14px 21px 21px 17px;    
+}
+
+.detail-avaliation-user{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.015em;
+    color: #FFFFFF;
+    margin-left: 63px;
+}
+
+.detail-avaliation-text{
+    border: 1px solid #E1E1E1;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 13px 16px 15px 19px;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: justify;
+    letter-spacing: -0.015em;
+    color: #9E9E9E;  
+    margin-bottom: 15px;  
+}
+

@@ -1,0 +1,84 @@
+.form-container{
+    margin-top: 42px;
+    margin-right: 40px;
+    padding-left: 51px;
+    padding-right: 51px;
+    padding-top: 74px;
+
+    background: #6C6C6C;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.lb-login{
+     margin-bottom: 84px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 65px;
+    text-align: center;
+    letter-spacing: -0.015em;
+    width: 100%;
+
+    color: #FFFFFF;
+
+}
+
+.form-input{
+    box-sizing: border-box;
+    background: #FEFEFE;
+    border: 1px solid #FEFEFE;
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 100%;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+
+    color: #9E9E9E;
+
+    mix-blend-mode: normal;
+
+    padding-left: 20px;
+    padding-top: 12px;
+    padding-bottom: 17px;    
+
+   }
+
+   .input-container{
+    margin-bottom: 42px; 
+   }
+
+   .btn-container{
+     display: inline;
+   }
+
+   .btn-content{
+        background: #FFC700;
+        border-radius: 10px;
+        width: 100%;
+
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 33px;
+       
+        text-align: center;
+        letter-spacing: -0.015em;        
+
+        color: #000000;
+        margin-top: 46px;
+        margin-bottom: 96px;
+        padding: 16px 19px;
+   }
+
+   .no-link{
+    text-decoration: none;
+   }
+
+  

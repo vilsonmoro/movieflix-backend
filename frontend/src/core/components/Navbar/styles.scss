@@ -1,0 +1,38 @@
+.main-nav{
+    background: #FFC700;  
+    padding: 17px 135px 20px 40px;  
+}
+
+.logo{
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 33px;
+    
+    letter-spacing: -0.015em;
+    color: #000000; 
+    text-decoration: none;    
+}
+
+.btnLogout{
+    width: 103px;  
+    float: right;
+    padding: 4px 8px;
+
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;   
+        
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: -0.015em;
+    color: #000000;
+}
+
+.user-logado{
+    float: right;
+    margin-right: 10px;
+}
+
+
+
