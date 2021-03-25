@@ -10,8 +10,8 @@ type RequestParams = {
    headers?: object;
 }
 
-const BASE_URL = 'https://vm-movieflix.herokuapp.com';
-//const BASE_URL = 'http://localhost:8080';
+//const BASE_URL = 'https://vm-movieflix.herokuapp.com';
+const BASE_URL = process.env.REACT_APP_BACKEND_URL ?? 'http://localhost:8080';
 
 export const makeRequest = ({method, url, data, params, headers}:RequestParams) => {
     return axios({
