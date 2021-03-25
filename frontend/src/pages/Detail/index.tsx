@@ -46,7 +46,7 @@ const Detail = () => {
             makePrivateRequest({ url: '/reviews', method: 'POST', data: payload })
                 .then(() => {
                     setReviewText('');                    
-                    window.location.reload();
+                   // window.location.reload();
                 });
         }      
 
