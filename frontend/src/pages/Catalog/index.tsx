@@ -45,12 +45,16 @@ const Catalog = () => {
         makePrivateRequest({ url: '/genres' })
             .then(response => setGenres(response.data))
             .finally(() => {
-                //    setIsLoadGenres(false)
+                //setIsLoadGenres(false)
             })
     }, []);
 
     const handleChangeName = (name: string) => {
         setGenre(name);
+    }
+
+    const handleLimparFiltro = () => {
+        setGenre("");
     }
 
     return (
@@ -65,17 +69,23 @@ const Catalog = () => {
                         {genres.map(gr => (<option value={gr.id}>{gr.name}</option>)
                         )}
                     </select>
+                    <a href="#logout"
+                        className="btn-limpar-filtro"
+                        onClick={handleLimparFiltro}
+                    >
+                        LIMPAR FILTRO
+                    </a>
                 </div>
 
                 <div className="catalog-movies">
                     {isLoading ? <MovieCardLoader /> : (
                         moviesResponse?.content.map(movie => (
                             <Link to={`/movies/${movie.id}`} key={movie.id}>
-                                <CardFilme 
-                                  title={movie.title} 
-                                  subtitle={movie.subTitle}
-                                  year={movie.year}
-                                  imgUrl={movie.imgUrl}
+                                <CardFilme
+                                    title={movie.title}
+                                    subtitle={movie.subTitle}
+                                    year={movie.year}
+                                    imgUrl={movie.imgUrl}
                                 />
                             </Link>
                         ))

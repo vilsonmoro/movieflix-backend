@@ -23,7 +23,7 @@ const Navbar = () => {
      return (
           <>
                <nav className="main-nav">
-                    <NavLink to="/" exact className="logo">
+                    <NavLink to="/catalog" exact className="logo">
                          <span>Movieflix</span>
                     </NavLink>
                     { currentUser && (    
